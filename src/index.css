@@ -1,13 +1,136 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(26, 32, 39);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ------------header-------------- */
+
+.App .header {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.App .header div {
+  padding-top: 10px;
+}
+
+.App .cards {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.App .cards .loading {
+  text-align: center;
+  color: #fff
+}
+
+.App .Card {
+  margin: 50px;
+}
+
+.App .Card:hover {
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.491);
+  color: azure;
+}
+
+.App .Card img {
+  border-bottom: 3px solid rgb(26, 32, 39);
+}
+
+/* ---------------filter-------------- */
+
+.App .filter {
+  color: #fff !important;
+}
+
+
+/* --------input--------- */
+
+.App .search-input {
+  width: 300px;
+  /* margin-right: 50px; */
+
+  border-bottom: 1px solid #fff !important;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.App .input {
+  display: block;
+  text-align: right;
+  margin-right: 50px;
+}
+
+.search-input:focus {
+  background-color: #ffffff16;
+  /* width: 300px;
+  border-radius: 10px 10px 0 0; */
+}
+
+.search-input:hover {
+  transition: 0.5s;
+  background-color: #ffffff16;
+  border-radius: 10px 10px 0 0;
+}
+
+/* -------------Pagination----------------- */
+
+.pagination{
+  list-style: none;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+.pagination li {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.pagination li:hover {
+  background-color: rgba(255, 255, 255, 0.825);
+}
+
+.pagination li a {
+  text-decoration: none;
+  color: rgb(26, 32, 39);
+}
+.pagination li.active {
+      background-color: rgba(0, 255, 17, 0.722);
+      color: #ffffff;
+}
+
+.pagination li.active a {
+  color: #fff;
+}
+/* ------media-------- */
+
+@media (width < 1200px) {
+  .App .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (width < 900px) {
+  .App .cards {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (width < 650px) {
+  .App .cards {
+    display: grid;
+    grid-template-columns: auto;
+  }
 }
